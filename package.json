@@ -1,0 +1,92 @@
+{
+  "name": "template-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Taro 项目模版",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "build:h5": "cross-env CUSTOM_ENV=dev taro build --type h5",
+    "build:h5:test": "cross-env CUSTOM_ENV=test taro build --type h5",
+    "build:h5:release": "cross-env CUSTOM_ENV=release taro build --type h5",
+    "build:h5:pre": "cross-env CUSTOM_ENV=pre taro build --type h5",
+    "build:h5:production": "cross-env CUSTOM_ENV=production taro build --type h5",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "build:weapp": "cross-env CUSTOM_ENV=dev taro build --type weapp",
+    "build:weapp:test": "cross-env CUSTOM_ENV=test taro build --type weapp",
+    "build:weapp:release": "cross-env CUSTOM_ENV=release taro build --type weapp",
+    "build:weapp:pre": "cross-env CUSTOM_ENV=pre taro build --type weapp",
+    "build:weapp:production": "cross-env CUSTOM_ENV=production taro build --type weapp",
+    "build:dd": "cross-env CUSTOM_ENV=prod taro build --type dd",
+    "dev:dd": "npm run build:dd -- --watch",
+    "lint": "tsc --noemit && eslint 'src/**/*.{js,jsx,tsx,ts}' --quiet",
+    "lint:fix": "tsc --noemit && eslint 'src/**/*.{js,jsx,tsx,ts}' --fix --quiet",
+    "prettier": "prettier --write '**/*.{less,css,md,json}'"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "xuxiu <zhangming@uni-ubi.com>",
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@pangu/icons-taro": "^1.0.0",
+    "@pangu/lib-mobile": "^1.0.0",
+    "@tarojs/components": "3.6.8",
+    "@tarojs/helper": "3.6.8",
+    "@tarojs/plugin-framework-react": "3.6.8",
+    "@tarojs/plugin-platform-alipay": "3.6.8",
+    "@tarojs/plugin-platform-h5": "3.6.8",
+    "@tarojs/plugin-platform-jd": "3.6.8",
+    "@tarojs/plugin-platform-qq": "3.6.8",
+    "@tarojs/plugin-platform-swan": "3.6.8",
+    "@tarojs/plugin-platform-tt": "3.6.8",
+    "@tarojs/plugin-platform-weapp": "^3.6.8",
+    "@tarojs/react": "3.6.8",
+    "@tarojs/runtime": "3.6.8",
+    "@tarojs/shared": "3.6.8",
+    "@tarojs/taro": "3.6.8",
+    "@tarojs/webpack5-runner": "3.6.8",
+    "classnames": "^2.3.2",
+    "qs": "^6.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@pangu/end-type-to-front-type": "^1.0.0",
+    "@pangu/lint": "^2.0.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@types/qs": "^6.9.7",
+    "@types/react": "^18.0.28",
+    "@types/webpack-env": "^1.13.6",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-transform-jsx-stylesheet": "^1.0.0",
+    "babel-preset-taro": "3.6.8",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.51.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^3.0.3",
+    "react-refresh": "^0.14.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.75.0",
+    "yorkie": "^2.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint --",
+      "git add ."
+    ],
+    "*.{less,css,md,json}": [
+      "npm run prettier --",
+      "git add ."
+    ]
+  }
+}

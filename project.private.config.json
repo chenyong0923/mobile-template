@@ -1,0 +1,19 @@
+{
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "projectname": "template-mobile",
+  "setting": {
+    "compileHotReLoad": true
+  }
+}
